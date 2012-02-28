@@ -95,6 +95,7 @@ def main():
         dispatch_value(info, 'globalLock', 'activeClients', 'readers')
         dispatch_value(info, 'globalLock', 'activeClients', 'writers')
 
+        sys.stdout.flush()
         # run every 60 seconds
         time.sleep(INTERVAL)
 
