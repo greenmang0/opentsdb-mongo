@@ -6,9 +6,6 @@ import time
 import sys
 
 """ set following variables according to your setup """
-# user who owns mongo process
-USER = 'ubuntu'
-
 # run script every 60 seconds
 INTERVAL = 60
 
@@ -20,7 +17,7 @@ MONGO_HOST = 'localhost'
 def fetch_info(host, port):
     """ connect to mongo and fetch server status """
     try:
-        m_info = urllib.urlopen('http://'+host+':'+str(port)+'/serverStatus').read()
+        m_info = urllib.urlopen('http://' + host + ':' + str(port) + '/serverStatus').read()
         j_info = json.loads(m_info)
         return j_info
     except:
@@ -40,6 +37,7 @@ def dispatch_value(info, identifier, metric, extra_info=None):
         return print_stat(identifier + '.' + metric + '.' + extra_info,
                           info[identifier][metric][extra_info],
                           'host=' + MONGO_HOST)
+
     return print_stat(identifier + "." + metric,
                       info[identifier][metric],
                       'host=' + MONGO_HOST)
