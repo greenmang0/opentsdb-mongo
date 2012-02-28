@@ -14,7 +14,7 @@ INTERVAL = 60
 
 # mongo
 MONGO_PORT = 28017 # web interface
-MONGO_HOST = 'thor.qotdinc.com'
+MONGO_HOST = 'localhost'
 
 
 def fetch_info(host, port):
