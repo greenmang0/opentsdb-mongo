@@ -51,7 +51,7 @@ This collector outputs following metrics
 * mongo.globalLock.activeClients.readers
 * mongo.globalLock.activeClients.writers
 
-All metrics are tagged with host=
+All metrics are tagged with **host=**
 
 For more information on these values, refer:
 
