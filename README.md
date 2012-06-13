@@ -1,7 +1,7 @@
 MongoDB Statistics Collector for OpenTSDB
 =========================================
 
-NOTE : This collector uses MongoDB's REST Interface so make sure "mongo" process
+**NOTE :** This collector uses MongoDB's REST Interface so make sure "mongo" process
 is started with "--rest" flag. The default port for REST interface is "28017", so
 collector should be able to access that port.
 
