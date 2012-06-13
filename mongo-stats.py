@@ -11,7 +11,7 @@ INTERVAL = 60
 
 # mongo
 MONGO_PORT = 28017 # web interface
-MONGO_HOST = 'localhost'
+MONGO_HOST = 'localhost' # CHANGE ME
 
 
 def fetch_info(host, port):
@@ -36,11 +36,11 @@ def dispatch_value(info, identifier, metric, extra_info=None):
     if extra_info:
         return print_stat(identifier + '.' + metric + '.' + extra_info,
                           info[identifier][metric][extra_info],
-                          'host=' + MONGO_HOST)
+                          'mongohost=' + MONGO_HOST)
 
     return print_stat(identifier + "." + metric,
                       info[identifier][metric],
-                      'host=' + MONGO_HOST)
+                      'mongohost=' + MONGO_HOST)
 
 
 def main():
